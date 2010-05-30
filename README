@@ -1,0 +1,31 @@
+aewm++ is a window manager for X11 born from aewm back in 2000
+
+this code is released under the GNU GPL version 3
+
+Frank Hale <frankhale@gmail.com>
+30 May 2010
+
+--
+
+Just to clear LICENSING up since this is based off aewm. Way back when I 
+started aewm++ I asked Decklin Foster if he mind if I released aewm++ as GPL. 
+He said he did not. 
+
+Here is the original license of aewm.
+
+website: http://www.red-bean.com/decklin/aewm/
+
+License
+=============================================================
+
+Copyright (c) 1999 Decklin Foster. All rights reserved.
+
+THIS SOFTWARE IS PROVIDED BY THE AUTHOR "AS IS", WITHOUT ANY EXPRESS
+OR IMPLIED WARRANTIES OF ANY KIND. IN NO EVENT SHALL THE AUTHOR BE
+HELD LIABLE FOR ANY DAMAGES CONNECTED WITH THE USE OF THIS PROGRAM.
+
+This program is free software. You are granted permission, free of
+charge, to copy this program, modify it, and distribute/publish/sell
+copies of it, but this license may not be modified or removed from the
+copyright notice. You may also use parts of this program's code in
+your own software, if you agree to distribute it under this license.
