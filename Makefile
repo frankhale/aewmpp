@@ -1,5 +1,5 @@
 # aewm++ - A small C++ window manager developed from aewm 0.9.6 around 2000 
-# Copyright (C) 2010 Frank Hale <frankhale@gmail.com>
+# Copyright (C) 2014 Frank Hale <frankhale@gmail.com>
 #
 # aewm++ can be found here: http://code.google.com/p/aewmpp/
 #
@@ -20,9 +20,9 @@
 # You should have received a copy of the GNU General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #
-# Date: 30 May 2010
-CC       = g++
-ADDITIONAL_CFLAGS   = -g -O2 -march=i686 -Wall
+# Date: 1 January 2014
+CC       = clang++
+ADDITIONAL_CFLAGS   = -g -O2 -Wall
 
 prefix   = /usr
 INCLUDES = -I$/usr/X11R6
