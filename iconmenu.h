@@ -1,7 +1,7 @@
 // aewm++ - A small C++ window manager developed from aewm 0.9.6 around 2000 
-// Copyright (C) 2000-2010 Frank Hale <frankhale@gmail.com>
+// Frank Hale <frankhale@gmail.com>
 //
-// aewm++ can be found here: http://code.google.com/p/aewmpp/
+// aewm++ can be found here: https://github.com/frankhale/aewmpp
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License

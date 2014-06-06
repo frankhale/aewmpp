@@ -1,7 +1,7 @@
 // aewm++ - A small C++ window manager developed from aewm 0.9.6 around 2000 
-// Copyright (C) 2000-2010 Frank Hale <frankhale@gmail.com>
+// Frank Hale <frankhale@gmail.com>
 //
-// aewm++ can be found here: http://code.google.com/p/aewmpp/
+// aewm++ can be found here: https://github.com/frankhale/aewmpp
 //
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License
@@ -34,7 +34,7 @@ private: /* Member Variables */
     	Display 	*dpy;
 	Window 		root;
 	XSizeHints	*size;
-    	Colormap	cmap;
+  Colormap	cmap;
 	int 		screen;
 	char		*name;
 	Window		window, frame, title, trans;	
@@ -42,7 +42,7 @@ private: /* Member Variables */
 	int 		border_width;
 	int  		x, y, width, height;	
 	int  		old_x, old_y, old_width, old_height;   
-    	bool has_focus, 
+  bool has_focus, 
 	     has_title, 
 	     has_border, 
 	     is_being_dragged, 
@@ -55,7 +55,7 @@ private: /* Member Variables */
 	     is_visible,
 	     has_been_shaped;
 
-    	int belongs_to_desktop, ignore_unmap;
+  int belongs_to_desktop, ignore_unmap;
     	Time last_button1_time;
     	 	
 	// For window title placement
