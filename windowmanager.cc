@@ -20,7 +20,7 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
-// Date: 30 May 2010
+// Date: 16 January 2015
 
 
 #include "aewm.h"
@@ -471,10 +471,11 @@ void WindowManager::grabKeys(Window w)
 		max_desktop_keys=9;
 	}
   for(int i=0;i<AEWM_KEY_ALT_COUNT;i++)
-  XGrabKey(dpy,XKeysymToKeycode(dpy,alt_keys[i]), (Mod1Mask|ControlMask),
-    w,True,GrabModeAsync,GrabModeAsync);
+    XGrabKey(dpy, XkbKeycodeToKeysym(dpy, alt_keys[i], 0, 1), (Mod1Mask|ControlMask), w,True,GrabModeAsync,GrabModeAsync);
+
   for(int i=0;i<AEWM_KEY_ALT_COUNT+max_desktop_keys;i++)
-		XGrabKey(dpy,XKeysymToKeycode(dpy,alt_keys[i]), (Mod1Mask), w,True,GrabModeAsync,GrabModeAsync);
+		XGrabKey(dpy, XkbKeycodeToKeysym(dpy, alt_keys[i], 0, 1), (Mod1Mask),
+    w,True,GrabModeAsync,GrabModeAsync);
 }
 
 void WindowManager::ungrabKeys(Window w)
@@ -495,7 +496,7 @@ void WindowManager::handleKeyPressEvent(XEvent *ev)
 {
 	KeySym ks;
   
-	ks=XKeycodeToKeysym(dpy,ev->xkey.keycode,0);
+	ks=XkbKeycodeToKeysym(dpy,ev->xkey.keycode,0, 1);
 	if (ks==NoSymbol) return;
   
 	switch(ks) 
@@ -576,7 +577,9 @@ void WindowManager::handleButtonPressEvent(XEvent *ev)
       (ev->xbutton.state==Mod1Mask) &&
       (c->getFrameWindow() == ev->xbutton.window)
       )
-      if(!XGrabPointer(dpy, c->getFrameWindow(), False, PointerMotionMask|ButtonReleaseMask, GrabModeAsync, GrabModeAsync, None, wm->getMoveCursor(), CurrentTime) == GrabSuccess) return; 
+      if(XGrabPointer(dpy, c->getFrameWindow(), False, 
+        PointerMotionMask|ButtonReleaseMask, GrabModeAsync, GrabModeAsync, 
+        None, wm->getMoveCursor(), CurrentTime) != GrabSuccess) return; 
 		} 
 		
 		switch (focus_model) 

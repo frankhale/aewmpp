@@ -20,14 +20,14 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //
-// Date: 30 May 2010
+// Date: 16 January 2015
 
 #ifndef _AEWM_H_
 #define _AEWM_H_
 
 #define WINDOW_MANAGER_NAME "aewm++"
 #define VERSION "xxx"
-#define DATE "29 December 2008"
+#define DATE "15 January 2015"
 
 #include <stdio.h>
 #include <unistd.h>
@@ -40,7 +40,7 @@
 
 #include <X11/cursorfont.h>
 #include <X11/Xlib.h>
-#include <X11/keysym.h>
+#include <X11/XKBlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xatom.h>
 #include <X11/Xmd.h>
