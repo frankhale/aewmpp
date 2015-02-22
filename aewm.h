@@ -26,8 +26,8 @@
 #define _AEWM_H_
 
 #define WINDOW_MANAGER_NAME "aewm++"
-#define VERSION "xxx"
-#define DATE "15 January 2015"
+#define VERSION "1.0"
+#define DATE "22 February 2015"
 
 #include <stdio.h>
 #include <unistd.h>
